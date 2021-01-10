@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第一天学习，null与undefined</title>
+</head>
+<body>
+    <script>
+        let config = null;
+        let web = undefined;
+        function show(name) {
+            console.log(name);
+        }
+        console.log(show());
+        function star(num){
+            num = num || 5;
+            // if (num == undefined){
+            //     // console.log(333);
+            //     num = 5;
+            // }
+            for (let i=0; i < num; i++){
+                document.write("*")
+            }
+            // console.log(num);
+            
+        }
+        star(20);
+    </script>
+</body>
+</html>

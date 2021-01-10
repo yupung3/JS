@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第一天学习，变量冻结</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        const HOST = {
+            url : "http://hdcms.com",
+            port : 5550
+        };
+        Object.freeze(HOST);
+        // HOST.port = 80;
+        console.log(HOST)
+    </script>
+</body>
+</html>

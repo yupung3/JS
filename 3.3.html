@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第一天学习，标量与引用类型的传值与传址特性</title>
+</head>
+<body>
+    <script>
+        // 传值
+        let a = 1;
+        let b = a;
+        console.log(a, b);
+        b = 3;
+        console.log(a, b);
+        // 传址
+        let e = {name:'hdcms'};
+        let f = e;
+        console.log(e, f);
+        f.name = "houdunren";
+        console.log(e, f);
+    </script>
+</body>
+</html>

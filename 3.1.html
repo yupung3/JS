@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第一天学习，作用域</title>
+</head>
+<body>
+    <script>
+        // const 常量不可更改（同一作用域不可更改），let 可以更改
+        const URL = "http://learning.com";
+        function show(){
+            const URL = "http://learning.com";
+            console.log(URL);
+        }
+        show();
+        // let URL = "http://learning.com";
+        // URL = "hdcms";
+        // var web = "hdcms";
+        // console.log(window.web);
+        // var screenLeft = 88;
+        // console.log(window.screenLeft);
+        // let web = "hdcms";
+        // console.log(Window.web);
+        let screenLeft = 88;
+        console.log(window.screenLeft);
+    </script>
+</body>
+</html>
