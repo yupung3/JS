@@ -2,9 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>第二天学习，运算符</title>
 </head>
 <body>
+    <script>
+        // let a = 3,
+        //     b = 5;
+        // let c = a + b;
+        // console.log(c)
+        // let a = 1,
+        // b = 2,
+        // c = '1';
+        // console.log(a == b); 
+        // console.log(a == c); 
+        // console.log(a === c); 
+    </script>
+    <!-- <input type="text" name="age"/>
+    <span id="msg"></span> -->
 
+    <script>
+        // let span = document.querySelector('#msg')
+        // document
+        //     .querySelector('[name="age"]')
+        //     .addEventListener("keyup", function(){
+                // console.log(3);
+                // msg = "";
+                // if(this.value>90){
+                //     msg = '年龄不能超过90';
+                // }
+                // span.innerHTML = msg;
+                // span.innerHTML = this.value >= 90 ? 
+                // "年龄不能超过90" : "";
+            // }); 
+    </script>
+    <script>
+        let a = 1,
+        b = 1;
+        if (a==1 && b==1){
+            console.log("条件成立")
+        }
+    </script>
+    <input type="text" name="password" />
+    <input type="text" name="confirm_password" />
+    <br />
+    <span name='msg'></span>
+    <script>
+        function query(name){
+            return document.querySelector(`[name='${name}']`);
+        }
+        // console.log(query("password"));
+        let inputs = document.querySelectorAll(
+            "[name='password'],[name='confirm_password']");
+        // console.log(inputs);
+        [...inputs].map(item => {
+            item.addEventListener("keyup", function(){
+                // console.log(33);
+                let msg = "";
+                if (query("password").value !== query("confirm_password").value ||
+                query("password").value.length < 5){
+                    msg = "两次密码不一致或密码长度小于5位"; 
+                }
+                query("msg").innerHTML = msg;
+            });
+        })
+    </script>
 </body>
 </html>
