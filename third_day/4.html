@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>第三天学习，switch使用</title>
+	</head>
+	<body>
+		<script>
+			/* let name = "视频";
+        switch(name){
+            case "产品":
+                console.log("chanpin");
+                break;
+            case "视频":
+                console.log("视频");
+                break;
+            default:
+                console.log("你猜");
+        } */
+			function message(age) {
+				let msg = ''
+            /* if (age > 60) {
+					msg = '老年'
+				} else if (age > 40) {
+					msg = '中年'
+				} else if (age > 20) {
+					msg = '青年'
+				} else {
+					msg = '小年轻'
+				} */
+				switch (true) {
+					case age > 60:
+						msg = '老年'
+						break
+					case age > 40:
+						msg = '中年'
+						break
+					case age > 20:
+						msg = '青年'
+						break
+					default:
+						msg = '小年轻'
+				}
+				return msg
+			}
+			console.log(message(15))
+		</script>
+	</body>
+</html>

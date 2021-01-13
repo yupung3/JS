@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>第三天学习，流程控制</title>
+	</head>
+	<body>
+        <input type="password" name="password" />
+        <span id="msg"></span>
+		<script>
+			/* let status = false
+			if (status) {
+				console.log('houdunren')
+			} else {
+				console.log('hdcms')
+            } */
+            document.querySelector("[name='password']")
+            .addEventListener('keyup', function(){
+                let length = this.value.length;
+                // console.log(length);
+                let span = document.querySelector("#msg");
+                let msg ="";
+                if (length>10){
+                    msg="密码安全";
+                }else if (length>6){
+                    msg = "中度安全";
+                }else{
+                    msg = "密码不安全";
+                }
+                span.innerHTML = msg;
+            })
+		</script>
+	</body>
+</html>

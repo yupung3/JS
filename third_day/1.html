@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <mata http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第三天学习，网站协议</title>
+</head>
+<body>
+    <form action="https://www.baidu.com" id="form">
+        用户名：<input type="text" name="user">
+        <hr>
+        <input type="checkbox" name="copyright"> 接收协议
+        <hr>
+        <button>提交</button>
+    </form>
+    <script>
+        function query(el){
+            return document.querySelector(el);
+        }
+        query("#form").addEventListener("submit", 
+        function(event){
+            let user = query("[name='user']").value.trim();
+            let copyright = query("[name='copyright']").checked;
+            // console.log(copyright);
+            console.log(user);
+            // alter(3);
+            if (!user || copyright===false){
+                event.preventDefault();
+                alert("请接收协议并添加用户名")
+            }
+            
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>第三天学习，while循环</title>
+	</head>
+	<body>
+		<script>
+			function table(options = { tr: 5, td: 3 }) {
+				document.write(`<table border="1" width="100%">`)
+				while (options.tr-- != 0) {
+					let td = options.td
+					document.write(`<tr>`)
+					while (td-- != 0) {
+						document.write(`<td>${td}</td>`)
+					}
+					document.write(`</tr>`)
+				}
+				document.write(`</table>`)
+            }
+            table({tr:4,td:2});
+		</script>
+	</body>
+</html>

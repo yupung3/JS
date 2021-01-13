@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>第三天学习，dowhile循环</title>
+	</head>
+	<body>
+		<script>
+			/* do{
+            console.log(33);
+        }while(false); */
+			let start = 0
+			/* do {
+            console.log(start);
+        }while(++start <=5); */
+			function star(row = 5) {
+				do {
+					let n = 0
+					do {
+						// console.log('*')
+						document.write('*')
+					} while (++n <= start)
+					// console.log("<br/>")
+					document.write('<br/>')
+				} while (++start <= row)
+			}
+			star(20)
+		</script>
+	</body>
+</html>
