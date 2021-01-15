@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>第四天学习，模板字面量嵌套使用技巧</title>
+        <style>
+            ur{
+                list-style: none;
+            }
+            li{
+                padding: 10px;
+            }
+            li:nth-child(odd){
+                /* background-color: yellow; */
+                /* background: #000; */
+                background: #16a085;
+                color: white;
+            }
+        </style>
+	</head>
+	<body>
+        
+		<script>
+			/* function show(){
+            return 'houdunren.com';
+        }
+        let hd = `www.${show()}`;
+        console.log(hd); */
+			let lesson = [
+				{ title: '媒体查询响应式布局' },
+				{ title: 'FLEX弹性盒模型' },
+				{ title: 'GRID栅格系统' },
+			]
+
+			function temple() {
+			// 	return `
+            // <ur>${lesson.map((item) => '<li>' + item.title + '</li>').join('')}</ur>
+            // `;
+            return `<ur>${lesson.map((item) => `<li>${item.title}</li>`).join('')}</ur>`
+            ;
+			}
+			document.body.innerHTML = temple()
+		</script>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>第四天学习，for-in and for-of</title>
+	</head>
+	<body>
+		<style>
+			ul {
+				list-style: none;
+			}
+			li {
+				border: solid 1px #dddddd;
+				height: 50px;
+				width: 200;
+			}
+		</style>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<script>
+			let lis = document.querySelectorAll('li')
+			// console.log(lis.length);
+			for (const li of lis) {
+				// console.log(li)
+				li.addEventListener('click', function () {
+					li.style.backgroundColor = 'red'
+				})
+			}
+			/* let hd = [
+				{ title: '第一章 走进JAVASCRIPT黑洞', lesson: 3 },
+				{ title: '第二章 JAVASCRIPT', lesson: 6 },
+				{ title: '第三章 JAVA', lesson: 5 },
+			]
+			document.write(`
+			             <table border="1" width=100%>
+			             <thread><tr><th>标题</th><th>课程数量</th></tr></thread>
+			         `)
+			for (let i in hd) {
+				document.write(`
+			             <tr><td>${hd[i].title}</td><td>${hd[i].lesson}</td></tr>
+			             `)
+			}
+            document.write('</table>') */
+			/* let hd = ["yuyu", "opopo"];
+            for (const value of hd) {
+                console.log(value);
+            } */
+		</script>
+	</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>第四天学习</title>
+	</head>
+	<body>
+		<script>
+			// let user
+			/* (function () {
+				var $ = (this.$ = {})
+				$.web = '后盾人'
+			}.bind(window)())
+            console.log($.web) */
+			/* {
+				let $ = (window.$ = {})
+				$.web = '后盾人'
+			}
+            console.log($.web) */
+			/* if (true) {
+				let user = '向军大叔'
+				;(function () {
+					if (true) {
+						console.log(`这是块内访问：${user}`)
+					}
+				})()
+			}
+            console.log(user) */
+			/* if (true) {
+				let user = '向军大叔'
+				;(function () {
+					if (true) {
+						console.log(`这是块内访问：${user}`)
+					}
+				})()
+			}
+            console.log(user) */
+			/* function run(){
+                let hd = 'hdcms';
+                if (true){
+                    let hds = "houdunren";
+                    console.log(hds);
+                }
+                console.log(hd);
+            }
+            run(); */
+			/* var num = 0
+
+			function show() {
+				var step = 10
+				do {
+					var res = 0
+					console.log((num = step++))
+					res = num
+				} while (step < 20)
+				console.log(`结果是${res}`)
+			}
+            show() */
+            const NAME = "nihao";
+            function show(){
+                const NAME = "huhu";
+                return NAME;
+            }
+            console.log(show());
+            console.log(NAME);
+		</script>
+	</body>
+</html>
