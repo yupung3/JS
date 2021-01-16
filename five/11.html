@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>第五天学习,Math.random</title>
+	</head>
+	<body>
+		<script>
+			// >= 0 ~ < 1
+			console.log(Math.random())
+			// 0~5 0~0.99 *5
+			console.log(Math.floor(Math.random() * (5 + 1)))
+
+			// 2~5
+			// min + Math.floor(Math.random()*(max-min+1))
+			console.log(2 + Math.floor(Math.random() * 4))
+
+			// 随机点名
+			const students = ['鱼骨', '周杰', '何盼', '周敏', '黎明']
+			console.log(students[0])
+			// 0~4
+			console.log(Math.floor(Math.random() * 5))
+			let i = Math.floor(Math.random() * 5)
+			console.log(students[i])
+
+			function arryRandomValue(arry, start = 1, end) {
+				end = end ? end : arry.length
+				start--
+				// console.log(end)
+				const index = start + Math.floor(Math.random() * (end - start))
+				return arry[index]
+			}
+			arryRandomValue(students)
+			console.log(arryRandomValue(students))
+		</script>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>第五天学习，电话号码模糊处理</title>
+	</head>
+	<body>
+		<script>
+			function phone(moble, len = 3) {
+				return String(moble).slice(0, len * -1) + '*'.repeat(len)
+			}
+			console.log(phone(123456987987))
+			console.log(phone(123456987987, 6))
+		</script>
+	</body>
+</html>

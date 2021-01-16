@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>第五天学习，类型转换技巧</title>
+	</head>
+	<body>
+		<script>
+			const string = '99'
+			console.log(typeof string)
+			console.log(string + 78)
+			console.log(string * 1 + 78)
+            console.log(Number(string) + 78)
+            const arry = ["nihao", "yupeng"];
+            console.log(arry.join(''))
+            console.log(arry.join('|'))
+
+            let str = "houdunren";
+            console.log(typeof str);   // string
+            let cms = new String('cms'); 
+            console.log(typeof cms);  // object
+		</script>
+	</body>
+</html>

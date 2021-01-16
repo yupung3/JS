@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>第五天学习，boolean隐式and显式转换原理</title>
+	</head>
+	<body>
+		<script>
+			let arry = []
+			console.log(arry == false)
+			let string = ''
+			console.log(string == false)
+
+			/* let number = 0;
+        console.log(typeof number);
+        number = !! number;
+        console.log(number); */
+
+			let number = 0
+			console.log(Boolean(number))
+
+			let strings = 'houdunren'
+			console.log(!!strings)
+			console.log(Boolean(strings))
+
+			let arrys = []
+			console.log(!![])
+			console.log(Boolean(arrys))
+
+			let ob = {}
+			console.log(!!ob)
+			console.log(Boolean(ob))
+
+			let date = new Date()
+			console.log(!!date)
+			console.log(Boolean(date))
+
+			while (true) {
+				const year = prompt('后盾人那年成立的？').trim()
+				if (!year) continue
+				// console.log(year.length)
+				console.log(year == '2010' ? '回答正确' : '输入错误')
+				break
+				// if (year == '2010') {
+				// 	console.log('回答正确')
+				// } else {
+				// 	console.log('输入错误')
+				// }
+			}
+		</script>
+	</body>
+</html>

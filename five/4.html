@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第五天学习，字符串的替换标题关键字</title>
+</head>
+<body>
+    <script>
+        const hd = "houdunren.com";
+        console.log(hd.replace("houdunren", 'hdcms'));
+
+        let string = "i like learing php and css in the houdunren.com";
+        let word = ["php", "css"];
+        const repl_str = word.reduce((pre, word)=>{
+            return pre.replace(word, `<a href=">w=${word}">${word}</a>`)
+        },string);
+        console.log(repl_str);
+        document.body.innerHTML += repl_str;
+    </script>
+</body>
+</html>

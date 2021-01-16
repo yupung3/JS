@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第五天学习，检索字符串</title>
+</head>
+<body>
+    <script>
+        const hd = 'houdunren.com';
+        console.log(hd.indexOf("o"));
+        console.log(hd.includes('h'));
+        console.log(hd.toLowerCase().startsWith('H'));
+        console.log(hd.toLowerCase().endsWith('m'));
+         
+        let string = "i like learing php and css in the houdunren.com";
+        let word = ["php", "css"];
+        const status = word.some((word)=>{
+            console.log(word);
+            return string.includes(word);
+        });
+        if (status){
+            console.log("找到关键词");
+        }
+    </script>
+</body>
+</html>

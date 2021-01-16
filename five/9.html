@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>第五天学习，数值类型与NaN类型</title>
+	</head>
+	<body>
+		<input type="text" name="number" value="99" />
+		<script>
+			// NaN Not a Number
+			console.log(Number('houdunren'))
+			console.log(2 / 'ji')
+			console.log(NaN == NaN)
+			console.log(Number.isNaN(2 / 'ji'))
+			console.log(Object.is(2 / 'ji', NaN))
+
+			const number = document.querySelector("[name='number").value
+			console.log(number)
+
+			// let hd = '89houdun'
+			let hd = '89.231houdun'
+			console.log(Number(hd))
+			// console.log(parseInt(hd))
+            console.log(parseFloat(hd))
+
+            let hds = 87.123456
+            console.log(hds.toFixed(3))
+		</script>
+	</body>
+</html>
