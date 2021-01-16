@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>第五天学习，封装日期格式化函数</title>
+	</head>
+	<body>
+		<script>
+			const date_1 = new Date('2000-01-01 01:10:12')
+			console.log(date_1)
+			console.log(date_1.getFullYear())
+			console.log(date_1.getMonth() + 1)
+			console.log(date_1.getDate())
+			console.log(date_1.getHours())
+			console.log(date_1.getMinutes())
+			console.log(date_1.getSeconds())
+
+			const formatTime = `${date_1.getFullYear()}年${
+				date_1.getUTCMonth() + 1
+			}月`
+			console.log(formatTime)
+
+			const date_2 = new Date('2000-01-01 01:10:12')
+			function dateFormat(date, format = 'YYYY-MM-DD HH:mm:ss') {
+				const config = {
+                    YYYY:date.getFullYear(),
+                    MM:date.getMonth()+1,
+                    DD:date.getDate(),
+                    HH:date.getHours(),
+                    mm:date.getMinutes(),
+                    ss:date.getSeconds()
+                };
+                for (const key in config){
+                    format = format.replace(key, config[key]);
+                }
+                return format
+            }
+            console.log(dateFormat(date_2,"YYYY年MM月DD日"))
+		</script>
+	</body>
+</html>

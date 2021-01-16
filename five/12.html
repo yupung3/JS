@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>第五天学习，日期时间戳的使用与计算脚本执行时间</title>
+	</head>
+	<body>
+		<script>
+			// const date = new Date()
+			// console.log(date)
+			// console.log(date * 1) // 对象类型 * 1 后返回时间戳，即1970年0时0分0秒至今的毫秒数
+			// console.log(typeof date)
+
+			// const hd = Date()
+			// console.log(hd)
+			// console.log(typeof hd)
+
+			// const date_1 = Date.now()
+			// console.log(date_1)
+
+			// const start = Date.now()
+			// for (let i = 0; i < 2000000000; i++) {}
+			// const end = Date.now()
+			// console.log(end - start)
+			// console.log(`(${end} - ${start})/1000秒`)
+			// console.log((end - start) / 1000 + '秒')
+
+			// console.time('for')
+			// for (let i = 0; i < 2000000000; i++) {}
+			// console.timeEnd('for')
+
+			// const date_2 = new Date('1990-9-22 10:22:13')
+			// console.log(date_2)
+			// console.log(date_2.getMonth());
+
+			// const date_3 = new Date(1990,9,22,21,59,00)
+			// console.log(date_3)
+
+			const param = [1990, 9, 22, 21, 59, 00]
+            const date_4 = new Date(...param)
+            console.log(date_4)
+		</script>
+	</body>
+</html>
