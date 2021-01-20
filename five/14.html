@@ -24,19 +24,19 @@
 			const date_2 = new Date('2000-01-01 01:10:12')
 			function dateFormat(date, format = 'YYYY-MM-DD HH:mm:ss') {
 				const config = {
-                    YYYY:date.getFullYear(),
-                    MM:date.getMonth()+1,
-                    DD:date.getDate(),
-                    HH:date.getHours(),
-                    mm:date.getMinutes(),
-                    ss:date.getSeconds()
-                };
-                for (const key in config){
-                    format = format.replace(key, config[key]);
-                }
-                return format
-            }
-            console.log(dateFormat(date_2,"YYYY年MM月DD日"))
+					YYYY: date.getFullYear(),
+					MM: date.getMonth() + 1,
+					DD: date.getDate(),
+					HH: date.getHours(),
+					mm: date.getMinutes(),
+					ss: date.getSeconds(),
+				}
+				for (const key in config) {
+					format = format.replace(key, config[key])
+				}
+				return format
+			}
+			console.log(dateFormat(date_2, 'YYYY年MM月DD日'))
 		</script>
 	</body>
 </html>

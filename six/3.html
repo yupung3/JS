@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>第六天学习，类型检测与转换</title>
+	</head>
+	<body>
+		<div>hdcms</div>
+		<div>houdunren</div>
+		<script>
+			let hd = document.querySelectorAll('div')
+			console.log(
+				Array.from(hd, function (item) {
+					// console.log(item.innerHTML)
+					item.style.backgroundColor = 'red'
+				})
+			)
+			// console.log(Array.isArray([]))
+
+			/* let hd = [1,2,3,78].toString()
+        let hds = [1,2,3,78].join("|")
+        console.log(location.href + "?id" + hds)
+        console.log(hd)
+        console.log(typeof hd) */
+
+			/* // 拆分
+        let str = "hdcms"
+        console.log(str.split(""))
+        console.log(Array.from(str)) */
+		</script>
+	</body>
+</html>
