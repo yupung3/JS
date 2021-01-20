@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>第七天学习，高效的find与findIdex新增方法</title>
+	</head>
+	<body></body>
+	<script>
+		/* let arr = [1,2,3,4,6]
+    var a = arr.find(function(item){
+        // console.log(item)
+        // return true;
+        // return item==2;
+        return item==200;
+    })
+    console.log(a) */
+
+		let lessons = [{ name: 'js' }, { name: 'python' }, { name: 'h5' }]
+		/* let status = lessons.find(function (item) {
+			return item.name == 'python';
+		});
+        console.log(status) */
+        
+        let index = lessons.findIndex(function(item){
+            return item.name=="python";
+        })
+        console.log(index)
+	</script>
+</html>

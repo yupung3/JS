@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第七天学习，splice & slice实现数组的增删改查</title>
+</head>
+<body>
+    <script>
+        // slice 不改变原数组；splice 会改变原数组
+        let a1 = [1,2,3,4,5]
+        let a2 = a1.slice(1,2)
+
+        console.log(a2)
+        console.log(a1)
+        a1.splice(a1.length,0,"末尾追加")
+        console.log("末尾追加",a1)
+        a1.splice(1,0,"houdunren")               // 增加
+        console.log(a1)
+        let a3 = a1.splice(0,3)                  // 删除
+        let a4 = a1.splice(0,3, "ni","hao","a")  // 替换
+        console.log("a4",a4)
+        console.log("a3",a3)
+        console.log("a1",a1)
+    </script>
+</body>
+</html>

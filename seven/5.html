@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>第七天学习，数组移动实例函数</title>
+	</head>
+	<body>
+		<script>
+			function move(arry, from, to) {
+				if (from < 0 || to >= arry.length) {
+					console.error('参数错误')
+					return
+                }
+                let newArry = [...arry]
+                let item = newArry.splice(from,1)
+                newArry.splice(to,1,...item)
+                return newArry
+			}
+			let arr1 = [1, 2, 3, 4]
+			console.log(move(arr1, 1, 3))
+		</script>
+	</body>
+</html>

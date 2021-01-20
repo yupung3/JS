@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>第七天学习，自定义find原型方法实现</title>
+	</head>
+	<body></body>
+	<script>
+		/* function find(arry, callback) {
+			for (const value of arry) {
+				if (callback(value)) return value;
+			}
+			return undefined;
+		}
+		let arr = [1, 2, 3, 4]
+		console.log(
+			find(arr, function (item) {
+				return item == 2;
+			})
+        ) */
+        
+        let arr = [1, 2, 3, 4]
+        Array.prototype.findValue = function(callback){
+            for (const value of this) if(callback(value)) return value;
+            return undefined;
+        }
+        const res = arr.findValue(function(item){
+            return item==2;
+        })
+        console.log(res)
+	</script>
+</html>
