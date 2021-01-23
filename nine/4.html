@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>第九天学习，LOGO效果元素构建</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			body {
+                width: 100vh;
+                height: 100vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background: #34495e;
+			}
+            div{
+                font-size: 5em;
+                font-weight: bold;
+                text-transform: uppercase;
+                color: violet;
+            }
+            div>span{
+                position: relative;
+                display: inline-block;
+            }
+            .color{
+                animation-name: color;
+                animation-duration: 1s;
+                animation-iteration-count: 2;
+                animation-timing-function: linear;
+                animation-direction: alternate;
+            }
+            @keyframes color{
+                50%{
+                    color:yellow;
+                    transform: scale(2);
+                }
+                to{
+                    color: tomato;
+                    transform: scale(.5);
+                }
+            }
+		</style>
+	</head>
+	<body>
+		<div>何盼老师好！</div>
+	</body>
+	<script>
+		const div = document.querySelector('div')
+		// console.log(div)
+		// console.log([...div.textContent])
+		// console.log(...div.textContent)
+
+		;[...div.textContent].reduce(function (pre, value, index) {
+			pre == index && (div.innerHTML = '')
+			let span = document.createElement('span')
+			span.innerHTML = value
+			div.appendChild(span)
+			span.addEventListener('mouseover', function () {
+				this.classList.add('color')
+            })
+            span.addEventListener("animationend",function(){
+                // console.log(1)
+                this.classList.remove('color')
+            })
+		}, 0)
+	</script>
+</html>

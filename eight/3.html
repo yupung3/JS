@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>第八天，循环操作中使用引用类型使用技巧</title>
+	</head>
+	<body></body>
+	<script>
+		let lessons = [
+			{ title: '媒体响应式布局', category: 'css' },
+			{ title: 'FLEX弹性盒模型', category: 'css' },
+			{ title: 'MYSQL多表查询随意操作', category: 'mysql' },
+		]
+		/* for (let i = 0; i < lessons.length; i++) {
+			lessons[i] = `后盾人${lessons[i].title}`
+		}
+        console.table(lessons) */
+        for (const value of lessons) {
+            value.title = `后盾人${value.title}`;
+        }
+        console.table(lessons)
+	</script>
+</html>

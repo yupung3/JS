@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>第八天学习，iterator迭代器</title>
+	</head>
+	<body></body>
+	<script>
+        let arr = [1,2,3]
+        // let keys = arr.keys()
+        // let keys = arr.values()
+        let values = arr.values()
+        while(({value,done}=values.next()) && done === false){
+            console.log(value)
+        }
+        // console.log(keys.next())
+        // console.log(keys.next())
+        // console.log(keys.next())
+        // console.log(keys.next())
+    //     let {value, done} = keys.next()
+    //     console.log(value, done)
+    // </script>
+</html>

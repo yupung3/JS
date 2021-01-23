@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>第八天学习，数组排序技巧</title>
+	</head>
+	<body></body>
+	<script>
+		/* let arr = [1, 2, 5, 8, 10]
+		// let arr = [1, 2]
+		arr = arr.sort(function (a, b) {
+            // -1 从小到大   1 正数 从大到小
+			// return a - b;
+			return b - a;
+        })
+        console.table(arr) */
+
+        let cart = [
+            {name:"iphone", price:12000},
+            {name:"imac", price:18000},
+            {name:"ipad", price:10000}
+        ]
+        cart = cart.sort(function(a,b){
+            return a.price - b.price
+        })
+        console.table(cart)
+	</script>
+</html>

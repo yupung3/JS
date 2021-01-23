@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>第八天学习，every and some的用法</title>
+	</head>
+	<body>
+		<input type="text" name="title" />
+		<span></span>
+	</body>
+	<script>
+		let keywords = ['php', 'js']
+		let title = document.querySelector('[name="title"]')
+		title.addEventListener('keyup', function () {
+			const res = keywords.some((keyword) => {
+				return this.value.indexOf(keyword) != -1
+            })
+            document.querySelector('span').innerHTML = res?"":"必须包含"+keywords.join(',')+"关键词"
+		})
+		/* const user = [
+			{ name: 'zhangsan', js: 89 },
+			{ name: 'lisi', js: 99 },
+			{ name: 'wangwu', js: 49 },
+		]
+		const res = user.every(function (item) {
+			return item.js >= 60
+		})
+		console.log(res ? '全部及格' : '有同学不及格') */
+		/* let arr = ["hdcm","houdunren"]
+    let status = arr.every(function(item,index, arr){
+        console.log(arr)
+        return true
+    })
+    console.log(status) */
+	</script>
+</html>

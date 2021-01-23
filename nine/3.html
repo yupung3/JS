@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>第九天学习，购物车汇总与获取最贵商品</title>
+	</head>
+	<body></body>
+	<script>
+		let cart = [
+			{ name: 'iphone', price: 12000 },
+			{ name: 'imac', price: 15000 },
+			{ name: 'ipad', price: 10000 },
+		]
+		function maxPrice(goods) {
+			return cart.reduce(function (pre, cur) {
+				return pre.price > cur.price ? pre : cur
+			})
+		}
+		console.log(maxPrice(cart))
+
+		function sunGoods(goods) {
+			return goods.reduce(function (sum, cur) {
+				return (sum += cur.price)
+			}, 0)
+		}
+		console.log(sunGoods(cart))
+
+		// 获取价格超过12000的商品的名称
+		function getNameByprice(goods, price) {
+			return goods
+				.reduce(function (arr, cur) {
+					if (cur.price > price) arr.push(cur)
+					return arr
+				}, [])
+				.map(function (item) {
+					return item.name
+				})
+		}
+		console.table(getNameByprice(cart, 12000))
+
+		// 数组去重
+		let arr = [1, 2, 5, 55, 4, 3, 2, 3, 3]
+		let newArray = arr.reduce(function (arr, cur) {
+			if (arr.includes(cur) === false) {
+				arr.push(cur)
+			}
+			return arr
+		}, [])
+		console.log(newArray)
+
+		// 商品去重
+		let carts = [
+			{ name: 'iphone', price: 12000 },
+			{ name: 'iphone', price: 12000 },
+			{ name: 'imac', price: 15000 },
+			{ name: 'ipad', price: 10000 },
+			{ name: 'ipad', price: 10000 },
+		]
+		function filterGoods(goods) {
+			return goods.reduce(function (arr, cur) {
+				let find = arr.find(function (v) {
+                    // console.log("V",v,"CUR",cur)
+					return v.name == cur.name
+                })
+                // console.log("find",find)
+				if (!find) arr.push(cur)
+				return arr
+			}, [])
+		}
+		console.table(filterGoods(carts))
+	</script>
+</html>
