@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>尚硅谷版本，4</title>
+		<script>
+			/* 
+        16进制 0x开头
+        8进制 0开头 
+        2进制 0b开头，但是不是所有的浏览器都支持
+        */
+
+			/*
+        将其他的数据类型转换为Boolean
+        1、使用Boolean()函数
+            注意：
+                数字转布尔，除了0和NaN，其余的都是True；
+                字符串转布尔，除了空串，其余的都是True
+                null和undefined的都是False
+                对象也会转化为 True
+        2、对数据做两次取反（非）运算
+        */
+
+			/* 
+        任何值和字符串相加（+）都会先转换为字符串，并做拼串操作
+        任何值做（-）、（*）、（/）运算都会自动转换为Number
+        **隐式转换：
+            转换为`字符串`： + ''；+
+            转换为 `数字` : - 0 ; *1; /1
+            转换为Boolean：对任意数据类型做两次`非`运算，即可将其转换为`布尔值`
+        */
+			var a = 123
+			a = a + ''
+			console.log(typeof a, a)
+			var b = '123'
+			// b = b - 0;
+			b = b * 1
+			console.log(typeof b, b)
+		</script>
+	</head>
+	<body></body>
+</html>

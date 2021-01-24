@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>尚硅谷版本，2</title>
+		<!-- 流程控制语句 -->
+		<script>
+			/*
+			 语句分类：
+			     1、条件判断语句
+			        if(条件表达式){
+			             执行语句。。。
+			         }
+                 2、条件分支语句
+                    switch语句：
+                    switch(条件表达式){
+                        case 表达式：
+                            语句。。。
+                            break;
+                        case 表达式：
+                            语句。。。
+                            break;
+                        case 表达式：
+                            语句。。。
+                            break;
+                        default:
+                            语句。。。
+                            break；
+                    }
+                 3、循环语句
+                    do{
+                        语句...
+                    }while(条件表达式)
+                    先执行循环体
+			 */
+			/*
+			prompt()可以弹出一个提示框，
+			该提示框中会带有一个文本框，
+			用户可以在文本框中输入一段内容。
+			该函数需要一个字符串作为参数，该字符串将作为提示框的提示文字。
+            用户输入的内容将作为函数的返回值，可以定义一个变量来接收该内容。
+            prompt()函数返回的值类型为String。
+			*/
+
+			/* var scores = prompt('请输入学生的成绩（0-100）：')
+			if (scores > 100 || scores < 0 || isNaN50(scores)) {
+				alert('输入非法！')
+			} else {
+				if (scores == 100) {
+					alert('满分。。')
+				} else if (scores >= 80) {
+					alert('优秀。。。')
+				} else if (scores >= 70) {
+					alert('良好。。。')
+				} else if (scores >= 60) {
+					alert('及格，要努力。。')
+				} else {
+					alert('准备挨打。。')
+				}
+			} */
+
+			/* var height = prompt('请输入身高：')
+			var money = prompt('请输入身家：')
+			var face = prompt('请输入颜值：')
+			if (height > 180 && money > 1000 && face > 500) {
+				alert('必须嫁')
+			} else if (height > 180 || money > 100 || face > 500) {
+				alert('可以考虑。。')
+			} else {
+				alert('放弃吧。。。')
+            } */
+
+			//  键盘输入3个数，num1、num2、num3，对他们进行排序，从小到大输出。
+			/* var num1 = +prompt('请输入第一个数：')
+			var num2 = +prompt('请输入第二个数：')
+			var num3 = +prompt('请输入第三个数：')
+			let lis = []
+			lis.push(num1, num2, num3)
+            alert(lis) */
+
+			/* 练习：假如投资年利率为5%，试求从1000块增长到5000块，需要花费多少年 */
+			var money = 1000,
+				i = 0
+			while (money < 5000) {
+				money *= 1.05
+				i++
+			}
+			console.log('需要的时间（年）：', i)
+		</script>
+	</head>
+	<body></body>
+</html>

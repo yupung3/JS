@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>尚硅谷版本，5，对象</title>
+		<script>
+			/* 
+            对象属于一种复合的数据类型，在对象中可以保存多个不同的数据类型的属性
+            对象的分类：
+                1、内建对象
+                    由ES标准中定义的对象，在任何的ES实现中都可以使用
+                    比如：Math String Number Boolean Function Object....
+                2、宿主对象
+                    由JS运行环境提供的对象，目前来讲主要是指有浏览器提供的对象
+                    比如：BOM DOM
+                3、自定义对象
+                    由开发人员自己创建的对象
+            */
+			// 使用new关键字调用的函数，是构建函数constructor
+			var obj = new Object()
+			//    console.log(typeof obj);
+			/* 
+           在对象中保存的值称之为属性，向对象添加属性
+           语法：
+                对象.属性 = 属性值；
+                *对象的属性名不强制要求遵守标识符的规范；
+                但是尽量遵守标识符的规范。
+                *如果要使用特殊的属性名，不能采用.的方式操作，
+                需要使用另一种方式：
+                    语法：对象["属性名"] = 属性值
+                    读取时也要采用这种方式。
+                使用`[]`这种形式更加灵活，
+                    在[]中可以直接传递一个变量，这样变量值是多少就会读取那个属性
+
+            读取对象中的属性，语法：
+                对象.属性名
+            如果读取的属性在对象中不存在，不会报错，而是会返回 undefined
+
+            修改对象的属性值
+            语法：
+                对象.属性名 = 新值
+
+            删除对象的属性，语法：
+                delete 对象.属性名
+           */
+			/*
+            in 运算符
+                通过该运算符可以检查一个对象中是否含有指定的属性
+                    如果有则返回true，没有返回false
+                语法：
+                    "属性名" in 对象
+            */
+			obj.name = '孙悟空'
+			obj.gender = '男'
+			obj.age = 18
+			console.log(obj)
+			console.log('test' in obj)
+		</script>
+	</head>
+	<body></body>
+</html>

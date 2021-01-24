@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>尚硅谷版本，4</title>
+		<script>
+			for (var i = 0; i < 5; i++) {
+				for (var j = 0; j <= i; j++) {
+					document.write('*')
+				}
+				document.write('<br/>')
+			}
+			document.write('<br/>')
+			for (let i = 0; i < 6; i++) {
+				for (var j = 0; j < 5 - i; j++) {
+					document.write('*')
+				}
+				document.write('<br/>')
+			}
+
+			// 九九乘法表
+			for (let i = 1; i < 10; i++) {
+				for (var j = 1; j <= i; j++) {
+					document.write(
+						// j + '*' + i + '=' + j * i + '&nbsp;&nbsp;&nbsp;'
+						'<span>' + j + '*' + i + '=' + j * i + '</span>'
+					)
+				}
+				document.write('<br/>')
+			}
+
+			console.time('无break优化的代码执行时间')
+			// 打印出1-100间所有的质数
+			for (var i = 2; i <= 100; i++) {
+				var flag = true
+				for (var j = 2; j <= parseInt(i / 2); j++) {
+					if (i % j == 0) {
+						flag = false
+					}
+				}
+				if (flag) {
+					// console.log('质数为', i)
+				}
+				// } else {
+				// 	console.log('非质数', i)
+				// }
+			}
+			console.timeEnd('无break优化的代码执行时间')
+			// 计时器计算程序执行时间
+			console.time('break优化的代码执行的时间')
+			// break优化质数判断
+			for (var i = 2; i < 100; i++) {
+				var flag = true
+				for (var j = 2; j <= parseInt(i / 2); j++) {
+					if (i % j == 0) {
+						flag = false
+						break
+					}
+				}
+				if (flag) {
+					// console.log('质数为：', i)
+				}
+			}
+			console.timeEnd('break优化的代码执行的时间')
+		</script>
+		<style type="text/css">
+			span {
+				display: inline-block;
+				width: 80px;
+			}
+		</style>
+	</head>
+	<body></body>
+</html>

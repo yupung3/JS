@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>尚硅谷版本学习，练习</title>
+		<script>
+			/* // 打印1~100之间所有的奇数之和
+			for (var i = 0, sum = 0; i <= 100; i++) {
+				if (i % 2 == 0) continue
+				sum += i
+			}
+			console.log('奇数之和：', sum) */
+
+			/* // 打印1-100之间所有7的倍数的个数及总和
+			for (var i = 1, sum = 0, count = 0; i <= 100; i++) {
+				if (i % 7 == 0) {
+					count++
+					sum += i
+				}
+			}
+			console.log('7的倍数的个数以及总和', count, sum) */
+			/* // 水仙花数
+			for (var i = 100; i < 1000; i++) {
+				var bai = parseInt(i / 100)
+				var shi = parseInt((i % 100) / 10)
+				var ge = i % 10
+				if (bai * bai * bai + shi * shi * shi + ge * ge * ge == i) {
+					console.log('水仙花数', i)
+				}
+			} */
+
+			// 接收一个数，判断是否是质数（质数只能被1和自身整除，1既不是质数也不是合数，质数大于1，且为自然数）
+			while (true) {
+				var num = prompt('请输入一个数字：')
+				if (num <= 1) {
+					alert('数字不合法，请重新输入！')
+				} else {
+					var flag = true
+					for (var i = 2; i < num; i++) {
+						if (num % i == 0) {
+							flag = false
+						}
+					}
+					if (flag) {
+						alert(num + '是质数')
+					} else {
+						alert(num + '不是质数')
+					}
+					break
+				}
+			}
+		</script>
+	</head>
+	<body></body>
+</html>
